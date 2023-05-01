@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -50,6 +52,8 @@ gem "bootsnap", require: false
 
 gem 'amazing_print', '~> 1.4'
 
+gem 'faker', '~> 3.2'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
 gem 'byebug', '~> 11.1', '>= 11.1.3'
@@ -57,8 +61,8 @@ gem 'factory_bot_rails', '~> 6.2'
 gem 'rspec-rails'
 gem 'rubocop-rails', '~> 2.19', '>= 2.19.1'
 gem 'guard', '~> 2.18'
-gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 gem 'rack-livereload', '~> 0.5.1'
 end
 
