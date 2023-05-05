@@ -1,8 +1,10 @@
 class FlightsController < ApplicationController
   def index
     @airport_options = Airport.all.map { |u| [u.location, u.id] }
-
-    @available_flights = Flight.where(search_params).order(departure_time: :asc) unless search_params.empty?
+    return if search_params.empty?
+    
+    @available_flights = Flight.where(search_params)
+    @connecting_flights = FlightConnections.new(search_params).find_connections
   end
 
   private
