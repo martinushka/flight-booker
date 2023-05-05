@@ -6,6 +6,7 @@ class FlightsController < ApplicationController
     @available_flights = Flight.where(search_params)
     @connecting_flights = FlightConnections.new(search_params).find_connecting_flights
     # @booking_options =
+    @booking_options = BookingOptions.new(search_params).find_flights
   end
 
   private
@@ -14,8 +15,8 @@ class FlightsController < ApplicationController
       params.permit(:origin_id, :destination_id, :departure_date)
     end
 
-# Will need to set up & use strong params
-    def flight_params
-      params.require(:flight).permit(:origin_id, :destination_id, :number, :departure_date, :flight_id)
-    end
+  # Will need to set up & use strong params
+  # def flight_params
+  #   params.require(:flight).permit(:origin_id, :destination_id, :number, :departure_date, :flight_id)
+  # end
 end
