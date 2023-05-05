@@ -11,5 +11,7 @@
 #  updated_at :datetime         not null
 #
 class Passenger < ApplicationRecord
-  belongs_to :booking
+  has_many :tickets, dependent: :destroy
+  has_many :bookings, through: :tickets
+  has_many :flights, through: :tickets
 end

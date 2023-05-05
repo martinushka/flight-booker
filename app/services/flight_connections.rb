@@ -31,17 +31,15 @@ class FlightConnections
   end
 
   def find_first_leg(code)
-    flight_options = Flight.where({ "origin_id" => @origin,
-                                    "destination_id" => code,
-                                    "departure_date" => @date })
-    flight_options.to_a
+    Flight.where({ "origin_id" => @origin,
+      "destination_id" => code,
+      "departure_date" => @date })
   end
 
   def find_second_leg(first_leg)
-    flight_options = Flight.where({ "origin_id" => first_leg.destination_id,
-                                    "destination_id" => @destination,
-                                    "departure_date" => @date })
-    flight_options.to_a
+    Flight.where({ "origin_id" => first_leg.destination_id,
+      "destination_id" => @destination,
+      "departure_date" => @date })
   end
 
   def layover_location?
