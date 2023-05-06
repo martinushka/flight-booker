@@ -64,6 +64,7 @@ gem 'guard', '~> 2.18'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 gem 'rack-livereload', '~> 0.5.1'
+gem 'shoulda-matchers', '~> 5.3'
 end
 
 group :development do
