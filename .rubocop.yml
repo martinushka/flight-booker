@@ -6,7 +6,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - db/schema.rb
-    - db/seeds.rb
+    - app/services/flight_generator.rb
     - bin/**/*
     - node_modules/**/*
 Style/StringLiterals:
