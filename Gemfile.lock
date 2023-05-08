@@ -271,6 +271,16 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.9.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -295,6 +305,7 @@ GEM
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
+    tilt (2.1.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -347,6 +358,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.3)
   rspec-rails
   rubocop-rails (~> 2.19, >= 2.19.1)
+  sass-rails
   selenium-webdriver
   shoulda-matchers (~> 5.3)
   simplecov (~> 0.12.0)

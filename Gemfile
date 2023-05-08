@@ -56,6 +56,8 @@ gem 'faker', '~> 3.2'
 
 gem 'figaro', '~> 1.2'
 
+gem 'sass-rails'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
 gem 'byebug', '~> 11.1', '>= 11.1.3'

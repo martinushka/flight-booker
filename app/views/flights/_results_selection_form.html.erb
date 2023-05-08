@@ -2,9 +2,11 @@
   <%= f.hidden_field :passenger_count, :value => params[:passenger_count] %>
   <div class="radio-button-container">
     <% @booking_options.each do |booking| %>
+
       <div class="radio-button">
         <%= f.radio_button :booking_option, booking.map(&:id), { required: true } %>
       </div>
+
       <div class="button-label">
         <%= f.label(:booking_option, {for: "booking_option_#{booking.map(&:id).join("_")}"}) do %>
           <% booking.each_with_index do |flight, index| %>
@@ -13,9 +15,9 @@
             <% end %>
             <%= flight.details %>
           <% end %>
-      </div>
          <% end %>
       </div>
+    <%end%>
   <% if @booking_options.empty? %>
     <p>Sorry, no flights match your search criteria. Please choose a date within the next 30 days.</p>
   <% else %>
