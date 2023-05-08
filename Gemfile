@@ -54,6 +54,8 @@ gem 'amazing_print', '~> 1.4'
 
 gem 'faker', '~> 3.2'
 
+gem 'figaro', '~> 1.2'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
 gem 'byebug', '~> 11.1', '>= 11.1.3'
@@ -75,6 +77,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 3.1'
   gem 'spring'
   gem 'web-console', '~> 4.2'
+  gem 'letter_opener', '~> 1.8', '>= 1.8.1'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
